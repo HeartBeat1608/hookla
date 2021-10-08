@@ -1,0 +1,70 @@
+{
+  "name": "@heartbeat1608/hookla",
+  "version": "0.1.2",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "prepare_build": "npm run clean && NODE_ENV=production ./node_modules/.bin/babel lib --out-dir dist --extensions \".ts,.tsx\" --ignore \"lib/**/*.test.js\"",
+    "clean": "rm -rf dist",
+    "copy": "cp package.json dist/ && cp README.md dist/ && cp .npmrc dist/",
+    "build": "npm run prepare_build && npm run copy"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-react": "^7.14.5",
+    "@babel/preset-typescript": "^7.15.0",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "@types/jest": "^26.0.24",
+    "@types/node": "^12.20.28",
+    "@types/react": "^17.0.27",
+    "@types/react-dom": "^17.0.9",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "typescript": "^4.4.3",
+    "web-vitals": "^1.1.2"
+  },
+  "peerDependencies": {
+    "react": ">=16.0.0"
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HeartBeat1608/hookla.git"
+  },
+  "author": "Durgesh Pandey (durgeshp1608@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HeartBeat1608/hookla/issues"
+  },
+  "homepage": "https://github.com/HeartBeat1608/hookla#readme"
+}
